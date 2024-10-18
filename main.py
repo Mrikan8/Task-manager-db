@@ -1,6 +1,9 @@
-import math
 import sqlite3
 import os
+from colorama import init, Fore, Style
+
+def clear():
+    os.system('cls')
 
 def create_table():
     conn = sqlite3.connect('ukoly.db')
@@ -12,17 +15,17 @@ def create_table():
 
 def main():
     create_table()
-    print('1. Nový úkol/r2. Seznam úkolů/r3. Vymazat úkoly/r4. Ukončit program')
+    print('1. Nový úkol\n2. Seznam úkolů\n3. Vymazat úkoly\n4. Ukončit program')
     vstup = int(input('Zadejte číslo: '))
     if vstup == 1:
+        clear()
         novy_ukol()
-        os.system('cls')
     elif vstup == 2:
+        clear()
         seznam_ukolu()
-        os.system('cls')
     elif vstup == 3:
+        clear()
         vymazat_ukoly()
-        os.system('cls')
     elif vstup == 4:
         print('Program byl ukončen')
         exit()
@@ -48,7 +51,7 @@ def seznam_ukolu():
     c.execute('SELECT * FROM ukoly')
     rows = c.fetchall()
     for row in rows:
-        print(f'ID: {row[0]}, Název: {row[1]}, Datum: {row[2]}, Popis: {row[3]}')
+        print(Fore.RED + f'ID: {row[0]}, Název: {row[1]}, Datum: {row[2]}, Popis: {row[3]}' + Style.RESET_ALL)
     conn.close()
     print('Seznam úkolů byl úspěšně zobrazen, chcete nějaký úkol smazat? pro ukončení stiskněte Enter')
     volba = input('Zadejte ID úkolu, který chcete smazat, pro smazání všech napiš - vse: ')
