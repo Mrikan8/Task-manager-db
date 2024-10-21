@@ -42,7 +42,8 @@ def novy_ukol():
     c.execute('INSERT INTO ukoly (name, date, description) VALUES (?, ?, ?)', (ukol, datum, text))
     conn.commit()
     conn.close()
-    print('Úkol byl úspěšně přidán')
+    input('Úkol byl úspěšně přidán, stiskni enter pro návrat do menu')
+    clear()
     main()
 
 def seznam_ukolu():
@@ -56,12 +57,14 @@ def seznam_ukolu():
     print('Seznam úkolů byl úspěšně zobrazen, chcete nějaký úkol smazat? pro ukončení stiskněte Enter')
     volba = input('Zadejte ID úkolu, který chcete smazat, pro smazání všech napiš - vse: ')
     if volba == '':
+        clear()
         main()
     elif volba == 'vse':
         vymazat_ukoly()
     else:
         smazat_ukol(volba)
     input()
+    clear()
     main()
 
 def vymazat_ukoly():
@@ -70,6 +73,7 @@ def vymazat_ukoly():
     c.execute('DELETE FROM ukoly')
     conn.commit()
     conn.close()
+    clear()
     main()
 
 def smazat_ukol(id):
@@ -79,6 +83,7 @@ def smazat_ukol(id):
     conn.commit()
     conn.close()
     print('Úkol byl úspěšně smazán')
+    clear()
     main()
 
 if __name__ == "__main__":
