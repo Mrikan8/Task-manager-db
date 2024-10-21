@@ -2,7 +2,7 @@
 Basic task manager with database and simple ui
 ## Instalace a spuštění 🚀
 
-Pro spuštění kteréhokoli příkladu na svém počítači, je nutné mít nainstalovaný Python (doporučujeme verzi 3.x).
+Pro spuštění kteréhokoli příkladu na svém počítači, je nutné mít nainstalovaný Python (doporučujeme verzi 3.x) a také funkci pip install.
 
 spustit program main.py
 
