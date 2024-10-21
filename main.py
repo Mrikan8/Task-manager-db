@@ -1,7 +1,6 @@
 import sqlite3
 import os
 import subprocess
-import novyukol
 import seznam
 
 
@@ -15,10 +14,11 @@ def create_table():
 
 def main():
     create_table()
-    print('1. Nový úkol\n2. Seznam úkolů\n3. Vymazat úkoly\n4. Ukončit program')
+    print('1. Nový úkol\n2. Seznam úkolů\n3. Vymazat úkoly\n4. Kalkulačka\n5. Ukončit program')
     vstup = int(input('Zadejte číslo: '))
     if vstup == 1:
         seznam.clear()
+        import novyukol
         novyukol.novy_ukol()
     elif vstup == 2:
         seznam.clear()
@@ -27,8 +27,13 @@ def main():
         seznam.clear()
         seznam.vymazat_ukoly()
     elif vstup == 4:
+        seznam.clear()
+        import kalkulacka
+        kalkulacka.kalkulacka()
+    elif vstup == 5:
         print('Program byl ukončen')
         exit()
+   
     else:
         print('Neplatný vstup')
         main()
