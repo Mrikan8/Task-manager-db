@@ -1,6 +1,10 @@
 import sqlite3
 import os
+import subprocess
 from colorama import init, Fore, Style
+
+def install_requirements():
+    subprocess.check_call([os.sys.executable, '-m', 'pip', 'install', '-r', 'requirements.txt'])
 
 def clear():
     os.system('cls')
@@ -52,7 +56,7 @@ def seznam_ukolu():
     c.execute('SELECT * FROM ukoly')
     rows = c.fetchall()
     for row in rows:
-        print(Fore.RED + f'ID: {row[0]}, Název: {row[1]}, Datum: {row[2]}, Popis: {row[3]}' + Style.RESET_ALL)
+        print(Fore.YELLOW + f'ID: {row[0]}, Název: {row[1]}, Datum: {row[2]}, Popis: {row[3]}' + Style.RESET_ALL)
     conn.close()
     print('Seznam úkolů byl úspěšně zobrazen, chcete nějaký úkol smazat? pro ukončení stiskněte Enter')
     volba = input('Zadejte ID úkolu, který chcete smazat, pro smazání všech napiš - vse: ')
@@ -87,4 +91,7 @@ def smazat_ukol(id):
     main()
 
 if __name__ == "__main__":
+    install_requirements()
+    init()
+    clear()
     main()
