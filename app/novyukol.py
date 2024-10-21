@@ -1,7 +1,7 @@
 import main
 import sqlite3
 import os
-import seznam
+import app.seznam as seznam
 
 def novy_ukol():
     ukol = input('Zadej název úkolu:')

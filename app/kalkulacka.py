@@ -1,6 +1,6 @@
 import math
 import main
-import seznam
+import app.seznam as seznam
 
 def kalkulacka():
     print('1. Sčítání\n2. Odčítání\n3. Násobení\n4. Dělení\n5. Mocnina\n6. Druhá odmocnina\n7. Faktoriál\n8. Návrat do menu\n9. Ukončit program')

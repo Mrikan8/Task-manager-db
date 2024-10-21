@@ -1,7 +1,7 @@
 import sqlite3
 import os
 import subprocess
-import seznam
+import app.seznam as seznam
 
 
 def create_table():
@@ -14,27 +14,33 @@ def create_table():
 
 def main():
     create_table()
-    print('1. Nový úkol\n2. Seznam úkolů\n3. Vymazat úkoly\n4. Kalkulačka\n5. Ukončit program')
-    vstup = int(input('Zadejte číslo: '))
-    if vstup == 1:
+    print('1. Nový úkol\n2. Seznam úkolů\n3. Vymazat úkoly\n4. Kalkulačka\n5. BMI kalkulačka\nEnter Ukončit program')
+    vstup = input('Zadejte volbu: ')
+    if vstup == '1':
         seznam.clear()
-        import novyukol
+        import app.novyukol as novyukol
         novyukol.novy_ukol()
-    elif vstup == 2:
+    elif vstup == '2':
         seznam.clear()
         seznam.seznam_ukolu()
-    elif vstup == 3:
+    elif vstup == '3':
         seznam.clear()
         seznam.vymazat_ukoly()
-    elif vstup == 4:
+    elif vstup == '4':
         seznam.clear()
-        import kalkulacka
+        import app.kalkulacka as kalkulacka
         kalkulacka.kalkulacka()
-    elif vstup == 5:
+    elif vstup == '5':
+        seznam.clear()
+        import app.bmi as bmi
+        bmi.bmi()
+    
+    elif vstup == '':
         print('Program byl ukončen')
         exit()
    
     else:
+        seznam.clear()
         print('Neplatný vstup')
         main()
 
