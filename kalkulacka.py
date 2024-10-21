@@ -40,8 +40,8 @@ def scitani():
     cislo1 = int(input('Zadej první číslo: '))
     cislo2 = int(input('Zadej druhé číslo: '))
     print(f'Výsledek je: {cislo1 + cislo2}')
-    input('Stiskněte 1 pro návrat do kalkulačky\n nebo enter pro návrat do menu: ')
-    if input == '':
+    volba = input('Stiskněte 1 pro návrat do kalkulačky\n nebo enter pro návrat do menu: ')
+    if volba == '':
         seznam.clear()
         main.main()
     else:
@@ -52,8 +52,8 @@ def odcitani():
     cislo1 = int(input('Zadej první číslo: '))
     cislo2 = int(input('Zadej druhé číslo: '))
     print(f'Výsledek je: {cislo1 - cislo2}')
-    input('Stiskněte 1 pro návrat do kalkulačky\n nebo enter pro návrat do menu: ')
-    if input == '':
+    volba = input('Stiskněte 1 pro návrat do kalkulačky\n nebo enter pro návrat do menu: ')
+    if volba == '':
         seznam.clear()
         main.main()
     else:
@@ -64,8 +64,8 @@ def nasobeni():
     cislo1 = int(input('Zadej první číslo:'))
     cislo2 = int(input('Zadej druhé číslo:'))
     print(f'Výsledek je: {cislo1 * cislo2}')
-    input('Stiskněte 1 pro návrat do kalkulačky\n nebo enter pro návrat do menu: ')
-    if input == '':
+    volba = input('Stiskněte 1 pro návrat do kalkulačky\n nebo enter pro návrat do menu: ')
+    if volba == '':
         seznam.clear()
         main.main()
     else:
@@ -79,8 +79,8 @@ def deleni():
         print('Nelze dělit nulou')
     else:
         print(f'Výsledek je: {cislo1 / cislo2}')
-    input('Stiskněte 1 pro návrat do kalkulačky\n nebo enter pro návrat do menu: ')
-    if input == '':
+    volba = input('Stiskněte 1 pro návrat do kalkulačky\n nebo enter pro návrat do menu: ')
+    if volba == '':
         seznam.clear()
         main.main()
     else:
@@ -91,8 +91,8 @@ def mocnina():
     cislo1 = int(input('Zadej číslo:'))
     cislo2 = int(input('Zadej mocninu:'))
     print(f'Výsledek je: {math.pow(cislo1, cislo2)}')
-    input('Stiskněte 1 pro návrat do kalkulačky\n nebo enter pro návrat do menu: ')
-    if input == '':
+    volba = input('Stiskněte 1 pro návrat do kalkulačky\n nebo enter pro návrat do menu: ')
+    if volba == '':
         seznam.clear()
         main.main()
     else:
@@ -102,8 +102,8 @@ def mocnina():
 def odmocnina():
     cislo1 = int(input('Zadej číslo:'))
     print(f'Výsledek je: {math.sqrt(cislo1)}')
-    input('Stiskněte 1 pro návrat do kalkulačky\n nebo enter pro návrat do menu: ')
-    if input == '':
+    volba = input('Stiskněte 1 pro návrat do kalkulačky\n nebo enter pro návrat do menu: ')
+    if volba == '':
         seznam.clear()
         main.main()
     else:
@@ -113,8 +113,8 @@ def odmocnina():
 def faktorial():
     cislo1 = int(input('Zadej číslo:'))
     print(f'Výsledek je: {math.factorial(cislo1)}')
-    input('Stiskněte 1 pro návrat do kalkulačky\n nebo enter pro návrat do menu: ')
-    if input == '':
+    volba  = input('Stiskněte 1 pro návrat do kalkulačky\n nebo enter pro návrat do menu: ')
+    if volba == '':
         seznam.clear()
         main.main()
     else:
