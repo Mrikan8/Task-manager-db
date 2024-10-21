@@ -8,5 +8,5 @@ spustit program main.py
 
 Git clone:
     ```bash
-    git clone [https://github.com/Mrikan8/Maturita.git]
+    git clone [https://github.com/Mrikan8/Task-manager-db.git]
     ```
