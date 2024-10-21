@@ -2,6 +2,8 @@ import math
 import main
 import app.seznam as seznam
 
+text = 'Stiskněte 1 pro návrat do kalkulačky\n nebo enter pro návrat do menu: '
+
 def bmi():
    while True:
     vaha = float(input('Zadej váhu v kg: '))
@@ -10,7 +12,7 @@ def bmi():
     print(bmi)
     if bmi < 18.5:
         print('Podváha')
-        volba = input('Stiskněte 1 pro návrat do kalkulačky\n nebo enter pro návrat do menu: ')
+        volba = input(text)
         if volba == '':
             seznam.clear()
             main.main()
@@ -20,7 +22,7 @@ def bmi():
     
     elif bmi >= 18.5 and bmi < 24.9:
         print('Normální váha')
-        volba = input('Stiskněte 1 pro návrat do kalkulačky\n nebo enter pro návrat do menu: ')
+        volba = input(text)
         if volba == '':
             seznam.clear()
             main.main()
@@ -30,7 +32,7 @@ def bmi():
     
     elif bmi >= 24.9 and bmi < 29.9:
         print('Nadváha')
-        volba = input('Stiskněte 1 pro návrat do kalkulačky\n nebo enter pro návrat do menu: ')
+        volba = input(text)
         if volba == '':
             seznam.clear()
             main.main()
@@ -40,7 +42,7 @@ def bmi():
     
     elif bmi >= 29.9:
         print('Obezita')
-        volba = input('Stiskněte 1 pro návrat do kalkulačky\n nebo enter pro návrat do menu: ')
+        volba = input(text)
         if volba == '':
             seznam.clear()
             main.main()
