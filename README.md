@@ -1,3 +1,12 @@
 # Task-manager-db
 Basic task manager with database and simple ui
-Spustit program main.py, načte všechny repozitáře a spustí hlavní menu
+## Instalace a spuštění 🚀
+
+Pro spuštění kteréhokoli příkladu na svém počítači, je nutné mít nainstalovaný Python (doporučujeme verzi 3.x).
+
+spustit program main.py
+
+Git clone:
+    ```bash
+    git clone [https://github.com/Mrikan8/Maturita.git]
+    ```
